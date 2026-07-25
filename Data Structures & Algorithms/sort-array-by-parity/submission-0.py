@@ -1,0 +1,21 @@
+class Solution:
+    def sortArrayByParity(self, nums: List[int]) -> List[int]:
+        evens = []
+        odds = []
+
+        nums.sort()
+        for num in nums:
+            if num % 2 == 0:
+                evens.append(num)
+            else:
+                odds.append(num)
+
+        output = []
+        
+        for even in evens:
+            output.append(even)
+
+        for odd in odds:
+            output.append(odd)
+
+        return output
